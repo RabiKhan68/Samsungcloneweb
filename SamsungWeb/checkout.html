@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Samsung Store</title>
+    <link rel="icon" type="image/png" href="samsungo.png">
+    <link rel="stylesheet" href="cart.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <div id="logo">
+            <a href="Samsungstore.html"><img src="samsung.png" alt="Samsung Logo"></a>
+        </div>
+        <button id="theme-toggle">
+            <i class="fas fa-moon"></i>
+        </button>
+    </header>
+    <hr>
+    <nav>
+        <ul>
+            <li><a href="account.php" target="_blank">Account</a></li>
+            <li><a href="product.html">Products</a></li>
+            <li><a href="#">Cart (<span id="cart-count">0</span>)</a></li>
+        </ul>
+    </nav>
+    
+    <section>
+        <h2>Checkout</h2>
+
+        <!-- Cart Summary -->
+        <div id="cart-summary">
+            <h3>Your Cart</h3>
+            <ul id="cart-items"></ul>
+            <p id="cart-total">Total: $0.00</p>
+        </div>
+
+        <!-- Checkout Form -->
+        <form id="checkout-form" action="https://gmail.com/" method="POST">
+            <input type="hidden" name="_subject" value="New Order Received!">
+            <input type="hidden" name="_captcha" value="false">
+        
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+        
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address" required>
+        
+            <label for="payment-method">Payment Method:</label>
+            <select id="payment-method" name="payment-method" required>
+                <option value="credit-card">Credit Card</option>
+                <option value="paypal">PayPal</option>
+                <option value="cash-on-delivery">Cash on Delivery</option>
+            </select>
+        
+            <input type="hidden" id="cart-data" name="cart-data">
+        
+            <button type="submit" id="confirm-order">Confirm Order</button>
+        </form>
+        
+    </section>
+
+    <footer>
+        <div id="copyright">
+            &copy; Samsung Electronics Co., Ltd. All rights reserved.
+        </div>
+        <div id="social">
+            <a href="https://www.facebook.com/samsungUS/" target="_blank"><i class="fab fa-facebook-square"></i></a>
+            <a href="https://www.instagram.com/samsung/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://twitter.com/samsungUS/" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.youtube.com/user/samsungUS/" target="_blank"><i class="fab fa-youtube"></i></a>
+            <a href="https://www.pinterest.com/samsungus/" target="_blank"><i class="fab fa-pinterest-square"></i></a>
+        </div>
+    </footer>
+
+    <script src="cart.js"></script>
+    <script src = "samsung.js"></script>
+</body>
+
+</html>
